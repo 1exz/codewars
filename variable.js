@@ -1,10 +1,11 @@
 /*
-You get an array of numbers, return the sum of all of the positives ones.
+Given an array of integers, return a new array with each value doubled.
 
-Example [1,-4,7,12] => 1 + 7 + 12 = 20
+For example:
 
-Note: if there is nothing to sum, the sum is default to 0.
+[1, 2, 3] --> [2, 4, 6]
 */
-function positiveSum(arr) {
-  return arr.filter(elem=>elem>0).reduce((a,b)=>a+b)
-}
+function maps(x){
+  return x.map(elem=>elem*2)
+  }
+
