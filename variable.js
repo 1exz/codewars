@@ -1,17 +1,17 @@
 /*
-Write a function, gooseFilter / goose-filter / goose_filter / GooseFilter, that takes an array of strings
- as an argument and returns a filtered array containing the same elements but with the 'geese' removed.
-The geese are any strings in the following array, which is pre-populated in your solution:
-geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
-For example, if this array were passed as an argument:
-["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]
-Your function would return the following array:
-["Mallard", "Hook Bill", "Crested", "Blue Swedish"]
-The elements in the returned array should be in the same order as in the initial array passed to your function,
-albeit with the 'geese' removed. Note that all of the strings will be in the same case as those provided,
-and some elements may be repeated.
+Consider an array/list of sheep where some sheep may be missing from their place.
+ We need a function that counts the number of sheep present in the array (true means present).
+For example,
+[true,  true,  true,  false,
+  true,  true,  true,  true ,
+  true,  false, true,  false,
+  true,  false, false, true ,
+  true,  true,  true,  true ,
+  false, false, true,  true]
+The correct answer would be 17.
+Hint: Don't forget to check for bad values like null/undefined
 */
-function gooseFilter (birds) {
-  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
-  return birds.filter(i => !geese.includes(i));
-};
+function countSheeps(arrayOfSheep) {
+  let m=0
+  return m=arrayOfSheep.filter(item => item ===true).length
+  }
