@@ -1,8 +1,10 @@
 /*
-Simple, remove the spaces from the string, then return the resultant string.
+Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+
+Return your answer as a number.
  
 */
-function noSpace(x){
-return x.split(" ").join("")
+function sumMix(x){
+return x.reduce((a,b)=>(1*a)+(1*b),0)
 }
-console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'))
+console.log(sumMix([9, 3, '7', '3']))
