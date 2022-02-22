@@ -1,10 +1,8 @@
 /*
-Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
-
-Return your answer as a number.
- 
+Complete the function which takes two arguments and returns all numbers which are divisible by the given divisor. 
+First argument is an array of numbers and the second is the divisor.
 */
-function sumMix(x){
-return x.reduce((a,b)=>(1*a)+(1*b),0)
+function divisibleBy(numbers, divisor){
+return numbers.filter(el=> el%divisor==0)
 }
-console.log(sumMix([9, 3, '7', '3']))
+console.log(divisibleBy([1,2,3,4,5,6], 2));
