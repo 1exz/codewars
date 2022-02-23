@@ -1,8 +1,22 @@
 /*
-Complete the function which takes two arguments and returns all numbers which are divisible by the given divisor. 
-First argument is an array of numbers and the second is the divisor.
+Write a function to get the first elements of asequence. 
+Passing a parameter n (default=1) will return the first n elements of the sequence.
+If n == 0 return an empty sequence []
+Examples
+var arr = ['a', 'b', 'c', 'd', 'e'];
+first(arr) //=> ['a'];
+first(arr, 2) //=> ['a', 'b']
+first(arr, 3) //=> ['a', 'b', 'c'];
+first(arr, 0) //=> [];
 */
-function divisibleBy(numbers, divisor){
-return numbers.filter(el=> el%divisor==0)
-}
-console.log(divisibleBy([1,2,3,4,5,6], 2));
+function first(arr, n) {
+    if(n>0){
+   return arr.slice(0, n)
+      }
+    else if(n==0){
+      return arr=[];
+    }
+    else {
+      return arr.slice(0,1)
+    }
+  }
