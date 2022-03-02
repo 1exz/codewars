@@ -1,22 +1,15 @@
 /*
-Write a function to get the first elements of asequence. 
-Passing a parameter n (default=1) will return the first n elements of the sequence.
-If n == 0 return an empty sequence []
-Examples
-var arr = ['a', 'b', 'c', 'd', 'e'];
-first(arr) //=> ['a'];
-first(arr, 2) //=> ['a', 'b']
-first(arr, 3) //=> ['a', 'b', 'c'];
-first(arr, 0) //=> [];
+Finish the uefaEuro2016() function so it return string just like in the examples below:
 */
-function first(arr, n) {
-    if(n>0){
-   return arr.slice(0, n)
-      }
-    else if(n==0){
-      return arr=[];
+function uefaEuro2016(teams, scores){
+  const team1=teams[0];
+  const team2=teams[1];
+   if(scores[0]>scores[1]){
+   return `At match ` + team1 + ` - ` + team2 + `, ` + team1 + ` won!`
+   } else if (scores[0] < scores[1]) {
+      return 'At match ' + team1 + ' - ' + team2+ ', ' + team2 + ' won!';
+    } else if (scores[0] === scores[1]) {
+      return 'At match ' + team1 + ' - ' + team2 + ', teams played draw.';
     }
-    else {
-      return arr.slice(0,1)
-    }
-  }
+     
+   }
