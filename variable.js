@@ -1,15 +1,7 @@
 /*
-Finish the uefaEuro2016() function so it return string just like in the examples below:
+Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
 */
-function uefaEuro2016(teams, scores){
-  const team1=teams[0];
-  const team2=teams[1];
-   if(scores[0]>scores[1]){
-   return `At match ` + team1 + ` - ` + team2 + `, ` + team1 + ` won!`
-   } else if (scores[0] < scores[1]) {
-      return 'At match ' + team1 + ' - ' + team2+ ', ' + team2 + ' won!';
-    } else if (scores[0] === scores[1]) {
-      return 'At match ' + team1 + ' - ' + team2 + ', teams played draw.';
-    }
-     
-   }
+function grow(x){
+   return x.reduce((a,b)=>a*b,1)
+}
+console.log(grow([4, 1, 1, 1, 4]))
